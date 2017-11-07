@@ -19,19 +19,20 @@ public class ExpandableListDataSource {
 
         List<String> actionFilms = Arrays.asList(context.getResources().getStringArray(R.array.actionFilms));
         List<String> musicalFilms = Arrays.asList(context.getResources().getStringArray(R.array.musicals));
-//        List<String> dramaFilms = Arrays.asList(context.getResources().getStringArray(R.array.dramas));
-//        List<String> thrillerFilms = Arrays.asList(context.getResources().getStringArray(R.array.thrillers));
+        List<String> dramaFilms = Arrays.asList(context.getResources().getStringArray(R.array.souths));
+        List<String> thrillerFilms = Arrays.asList(context.getResources().getStringArray(R.array.easts));
 //        List<String> comedyFilms = Arrays.asList(context.getResources().getStringArray(R.array.comedies));
 
 
         expandableListData.put(filmGenres.get(0), actionFilms);
 
         expandableListData.put(filmGenres.get(1), musicalFilms);
-//        expandableListData.put(filmGenres.get(2), dramaFilms);
-//        expandableListData.put(filmGenres.get(3), thrillerFilms);
+        expandableListData.put(filmGenres.get(2), dramaFilms);
+        expandableListData.put(filmGenres.get(3), thrillerFilms);
 //        expandableListData.put(filmGenres.get(4), comedyFilms);
 
         return expandableListData;
     }
+
 }
 

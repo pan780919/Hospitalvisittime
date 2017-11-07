@@ -1,21 +1,12 @@
 package com.jackpan.hospitalvisittime;
 
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.jackpan.hospitalvisittime.Data.CychData;
 import com.jackpan.hospitalvisittime.Data.ExpandableListDataSource;
@@ -26,7 +17,6 @@ import org.jsoup.nodes.Element;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -50,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         p = new ProgressDialog(this);
-        p.setMessage("122");
+        p.setMessage("讀取中");
         p.show();
         test();
         initData();
@@ -61,7 +51,12 @@ public class MainActivity extends AppCompatActivity {
     private void initData() {
         items = getResources().getStringArray(R.array.film_genre);
         mExpandableListData = ExpandableListDataSource.getData(this);
-        mExpandableListTitle = new ArrayList(mExpandableListData.keySet());
+        mExpandableListTitle = new ArrayList();
+        for (String item : items) {
+            mExpandableListTitle.add(item);
+
+        }
+
     }
 
     private void initExpandableListView() {
