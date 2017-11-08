@@ -62,4 +62,5 @@
         <item>專業/教科書/政府出版本</item>
         <item>外文書</item>
     </string-array>
+    <string name="title_activity_cych">CychActivity</string>
 </resources>

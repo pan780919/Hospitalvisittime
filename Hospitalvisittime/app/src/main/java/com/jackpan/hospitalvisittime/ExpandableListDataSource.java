@@ -1,4 +1,4 @@
-package com.jackpan.hospitalvisittime.Data;
+package com.jackpan.hospitalvisittime;
 import android.content.Context;
 
 import com.jackpan.hospitalvisittime.R;

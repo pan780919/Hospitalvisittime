@@ -9,7 +9,6 @@ import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 
 import com.jackpan.hospitalvisittime.Data.CychData;
-import com.jackpan.hospitalvisittime.Data.ExpandableListDataSource;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
